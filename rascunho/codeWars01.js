@@ -16,6 +16,6 @@ var countBits = function(n) {
         }
     }
     return count
-  };
+};
 
-  console.log(countBits(8))
+console.log(countBits(8))
