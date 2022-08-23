@@ -11,23 +11,7 @@
 // Input: 123456789 Output: 987654321
 
 function descendingOrder(n){
-
-    n = n.toString();
-    var i, j, aux;
-    var newString;
-
-    for(i = 0; i < n.length; i++) {
-        console.log('i: ', i)
-        for(j = 0; j < n.length; j++) {
-            console.log('j: ', j)
-            if(n.charAt(j) > n.charAt(j+1)) {
-                aux = n.charAt(j)
-                newString += n.charAt(j+1)
-                newString += aux
-            }
-        }
-    }
-    return newString
+    return parseInt((String(n).split('').sort().reverse().join('')))
 }
 
-console.log(descendingOrder(158432))
+console.log(descendingOrder(42145))
