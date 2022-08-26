@@ -36,13 +36,23 @@
 //   });
 // });
 
-
-var number = function(busStops){
+function number (busStops){
   
+  console.log('Iniciado')
     var people = 0
     for (var i = 0; i < busStops.length; i++) {
-      for(var j = 0; j < busStops.length; i++) {
-        people = busStops[i][j]
+      for(var j = 0; j < 2; j++) {
+        if (j == 1) {
+          people -= busStops[i][j]
+        } else {
+          people += busStops[i][j]
+        }
+        
+
       }
+      j = 0
     }
+    return people
   }
+
+console.log(number([ [ 10, 0 ], [ 3, 5 ], [ 5, 8 ] ]))
